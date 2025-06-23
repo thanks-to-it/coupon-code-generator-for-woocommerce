@@ -2,22 +2,22 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Coupon Code Generator for WooCommerce 2.0.0-dev\n"
+"Project-Id-Version: Coupon Code Generator for WooCommerce 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/coupon-code-generator-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-15T15:43:52+00:00\n"
+"POT-Creation-Date: 2025-06-23T16:34:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: coupon-code-generator-for-woocommerce\n"
 
 #. Plugin Name of the plugin
 #: coupon-code-generator-for-woocommerce.php
-#: includes/class-alg-wc-coupon-code-generator-core.php:237
-#: includes/class-alg-wc-coupon-code-generator-core.php:266
+#: includes/class-alg-wc-coupon-code-generator-core.php:312
+#: includes/class-alg-wc-coupon-code-generator-core.php:341
 msgid "Coupon Code Generator for WooCommerce"
 msgstr ""
 
@@ -42,238 +42,263 @@ msgid "https://profiles.wordpress.org/algoritmika/"
 msgstr ""
 
 #. Translators: %s: Coupon code.
-#: includes/class-alg-wc-coupon-code-generator-core.php:104
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:247
+#: includes/class-alg-wc-coupon-code-generator-core.php:113
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:231
 msgid "Here is a coupon for your next purchase: %s"
 msgstr ""
 
+#. Translators: %d: Number of coupons.
+#: includes/class-alg-wc-coupon-code-generator-core.php:164
+msgid "%d coupon(s) created."
+msgstr ""
+
 #. Translators: %1$s: Plugin name, %2$s: Order ID.
-#: includes/class-alg-wc-coupon-code-generator-core.php:236
+#: includes/class-alg-wc-coupon-code-generator-core.php:311
 msgid "Created by \"%1$s\" plugin for order #%2$s"
 msgstr ""
 
 #. Translators: %1$s: Plugin name, %2$s: Coupon code.
-#: includes/class-alg-wc-coupon-code-generator-core.php:265
+#: includes/class-alg-wc-coupon-code-generator-core.php:340
 msgid "\"%1$s\" plugin generated <code>%2$s</code> coupon for this order."
 msgstr ""
 
-#: includes/class-alg-wc-coupon-code-generator.php:181
+#: includes/class-alg-wc-coupon-code-generator.php:179
 msgid "Settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:25
-msgid "General"
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:25
+msgid "Auto Coupon"
 msgstr ""
 
 #. Translators: %d: Length.
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:38
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:38
 msgid "length %d"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:94
-msgid "Order Coupon Options"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:96
-msgid "This will generate coupon automatically for the selected order status updates."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:97
-msgid "Coupon code will be automatically attached to the selected customer's emails."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:103
-msgid "Order coupon"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:104
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:277
-msgid "Enable section"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:110
-msgid "Order status"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:111
-msgid "Select order status(es) on which coupon code should be created. If you select multiple statuses, coupon will be created only once, on whichever status change occurs first."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:119
-msgid "Minimum order amount"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:122
-msgid "Minimum order amount for the coupon to be generated."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:123
-msgid "Ignored if empty or zero."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:130
-msgid "Coupon code template"
-msgstr ""
-
-#. Translators: %s: Placeholder list.
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:133
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:236
-msgid "Available placeholders: %s."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:149
-msgid "Coupon type"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:155
-msgid "Percentage discount"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:156
-msgid "Fixed cart discount"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:157
-msgid "Fixed product discount"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:161
-msgid "Coupon amount"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:168
-msgid "Individual use only"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:169
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:203
-msgid "Enable"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:170
-msgid "Coupon cannot be used in conjunction with other coupons."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:176
-msgid "Product categories"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:178
-msgid "Product categories that the coupon will be applied to, or that need to be in the cart in order for the \"Fixed cart discount\" to be applied."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:179
-msgid "Ignored if empty."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:188
-msgid "Usage limit per coupon"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:195
-msgid "Usage limit per user"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:202
-msgid "Allowed emails"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:204
-msgid "Set coupon's \"Allowed emails\" option to order's billing email."
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:210
-msgid "Minimum spend"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:217
-msgid "Maximum spend"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:224
-msgid "Emails"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:233
-msgid "Email template"
-msgstr ""
-
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:264
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:52
 msgid "Automatic Coupon Code Options"
 msgstr ""
 
 #. Translators: %s: Add coupon link.
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:267
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:55
 msgid "This will generate coupon code automatically when adding new coupon in %s."
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:269
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:57
 msgid "Marketing > Coupons > Add coupon"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:276
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:64
 msgid "Automatic coupon code"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:283
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:65
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:88
+msgid "Enable section"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:71
 msgid "Template"
 msgstr ""
 
 #. Translators: %s: Placeholder list.
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:286
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:74
 msgid "Placeholders: %s."
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:302
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:90
 msgid "Algorithm"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:308
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:309
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:310
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:96
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:97
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:98
 msgid "Hash"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:311
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:99
 msgid "Random letters and numbers"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:312
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:100
 msgid "Random letters"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:313
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:101
 msgid "Random numbers"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:317
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:105
 msgid "Length"
 msgstr ""
 
-#: includes/settings/class-alg-wc-coupon-code-generator-settings-general.php:318
-msgid "Length value will be ignored if set above the maximum length for selected algorithm. Set to zero to use full length for selected algorithm."
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-auto-coupon.php:106
+msgid "The length value will be ignored if it exceeds the maximum length for the selected algorithm. Set to zero to use the full length for the selected algorithm."
 msgstr ""
 
-#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:34
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:25
+msgid "Order Coupon"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:78
+msgid "Order Coupon Options"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:80
+msgid "This will generate coupon automatically for the selected order status updates."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:81
+msgid "Coupon code will be automatically attached to the selected customer's emails."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:87
+msgid "Order coupon"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:94
+msgid "Order status"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:95
+msgid "Select order status(es) on which coupon code should be created. If you select multiple statuses, coupon will be created only once, on whichever status change occurs first."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:103
+msgid "Minimum order amount"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:106
+msgid "Minimum order amount for the coupon to be generated."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:107
+msgid "Ignored if empty or zero."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:114
+msgid "Coupon code template"
+msgstr ""
+
+#. Translators: %s: Placeholder list.
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:117
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:220
+msgid "Available placeholders: %s."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:133
+msgid "Coupon type"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:139
+msgid "Percentage discount"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:140
+msgid "Fixed cart discount"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:141
+msgid "Fixed product discount"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:145
+msgid "Coupon amount"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:152
+msgid "Individual use only"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:153
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:187
+msgid "Enable"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:154
+msgid "Coupon cannot be used in conjunction with other coupons."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:160
+msgid "Product categories"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:162
+msgid "Product categories that the coupon will be applied to, or that need to be in the cart in order for the \"Fixed cart discount\" to be applied."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:163
+msgid "Ignored if empty."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:172
+msgid "Usage limit per coupon"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:179
+msgid "Usage limit per user"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:186
+msgid "Allowed emails"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:188
+msgid "Set coupon's \"Allowed emails\" option to order's billing email."
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:194
+msgid "Minimum spend"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:201
+msgid "Maximum spend"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:208
+msgid "Emails"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:217
+msgid "Email template"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:248
+msgid "Tools"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:253
+msgid "Create coupons for all orders"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:254
+msgid "Create"
+msgstr ""
+
+#: includes/settings/class-alg-wc-coupon-code-generator-settings-order-coupon.php:255
+msgid "Check the box and save changes to run the tool."
+msgstr ""
+
+#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:26
 msgid "Coupon Code Generator"
 msgstr ""
 
-#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:72
+#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:64
 msgid "Reset Settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:77
+#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:69
 msgid "Reset section settings"
 msgstr ""
 
-#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:78
+#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:70
 msgid "Reset"
 msgstr ""
 
-#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:79
+#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:71
 msgid "Check the box and save changes to reset."
 msgstr ""
 
-#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:119
+#: includes/settings/class-alg-wc-settings-coupon-code-generator.php:111
 msgid "Your settings have been reset."
 msgstr ""

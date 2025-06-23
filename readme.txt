@@ -3,7 +3,7 @@ Contributors: algoritmika, thankstoit, anbinder, karzin
 Tags: woocommerce, coupon, woo commerce
 Requires at least: 4.4
 Tested up to: 6.8
-Stable tag: 1.4.2
+Stable tag: 2.0.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,9 +13,14 @@ Generate coupons in WooCommerce. Beautifully.
 
 The **Coupon Code Generator for WooCommerce** plugin lets you enable automatic coupon code generation in WooCommerce.
 
-### 🚀 Automatic Order-Based Coupon Generator for WooCommerce ###
+### ✅ Main Features ###
 
-Automatic Coupon Generator in Emails for WooCommerce plugin is a dynamic tool designed to enhance your WooCommerce store's marketing and customer retention strategies.
+* **Order Coupon** - generate coupon automatically for the selected order status updates. Coupon code will be automatically attached to the selected customer's emails.
+* **Automatic Coupon Code** - generate coupon code automatically when adding new coupon in "Marketing > Coupons > Add coupon".
+
+### 🚀 Automatic Order-Based Coupon Generator (in Emails) for WooCommerce ###
+
+The "Coupon Code Generator for WooCommerce" plugin is a dynamic tool designed to enhance your WooCommerce store's marketing and customer retention strategies.
 
 This plugin streamlines the process of creating and distributing coupons by automating it based on order statuses.
 
@@ -27,21 +32,15 @@ Automatically create coupons triggered by specific order statuses, such as "Orde
 
 This feature allows you to reward customers post-purchase or encourage further engagement, enhancing customer loyalty and satisfaction.
 
-### 🚀 Customizable Coupon Templates ###
+### 🚀 Select Which Emails to Include Coupon In ###
 
-### 🚀 Personalized Coupon Design with Dynamic Placeholders ###
+Incorporate coupons into specific customer emails, such as "Order Completed" notifications. This targeted delivery ensures that your coupons are seen and used at critical points in the customer journey, maximizing their impact.
+
+### 🚀 Customizable Coupon Templates - Personalized Design with Dynamic Placeholders ###
 
 Personalize your coupons with a range of placeholders like `%order_id%`, `%order_billing_first_name%`, and `%order_customer_id%`.
 
 This customization ensures that each coupon feels personal to the recipient, increasing its perceived value and effectiveness.
-
-### 🚀 Advanced Automatic Coupon Code Generator ###
-
-Other than order statuses, you can facilitate effortless coupon creation with advanced options for automatic coupon code generation.
-
-You can automate creating the coupon when adding new coupon in "Marketing > Coupons > Add coupon" page without manual code entry.
-
-Customize the code template using placeholders like `%date_MM%` or `%user_id%`, and define the code style (hash, random letters, numbers, mix) and length.
 
 ### 🚀 Restrict Coupon Usage by Email ###
 
@@ -51,17 +50,13 @@ Secure your promotional strategies by limiting coupon usage to the email address
 
 Implement minimum and maximum spending thresholds to be able to use the coupons. This way, you can only make coupons work when customers have at at least $100 in cart (or not exceeding specific amount), to ensure the profitability of your promotions.
 
-### 🚀 Select Which Emails to Include Coupon In ###
+### 🚀 Advanced Automatic Coupon Code Generator ###
 
-Incorporate coupons into specific customer emails, such as "Order Completed" notifications. This targeted delivery ensures that your coupons are seen and used at critical points in the customer journey, maximizing their impact.
+Other than order statuses, you can facilitate effortless coupon creation with advanced options for automatic coupon code generation.
 
-### 🚀 Order Coupon ###
+You can automate creating the coupon when adding new coupon in "Marketing > Coupons > Add coupon" page without manual code entry.
 
-This will generate coupon automatically for the selected order status updates. Coupon code will be automatically attached to the selected customer's emails.
-
-### 🚀 Automatic Coupon Code ###
-
-This will generate coupon code automatically when adding new coupon in "Marketing > Coupons > Add coupon".
+Customize the code template using placeholders like `%date_MM%` or `%user_id%`, and define the code style (hash, random letters, numbers, mix) and length.
 
 ### 🗘 Feedback ###
 
@@ -80,12 +75,15 @@ This will generate coupon code automatically when adding new coupon in "Marketin
 
 == Changelog ==
 
-= 2.0.0 - 15/06/2025 =
+= 2.0.0 - 23/06/2025 =
+* Fix - Emails - Coupon code was not added to email.
 * Fix - Translation loading fixed.
-* Dev - Automatic coupon code - Algorithm - Moved to the free plugin version.
-* Dev - Automatic coupon code - Length - Moved to the free plugin version.
+* Dev - Automatic Coupon - Algorithm - Moved to the free plugin version.
+* Dev - Automatic Coupon - Length - Moved to the free plugin version.
+* Dev - Order Coupon - "Create coupons for all orders" tool added.
 * Dev - Security - Shortcodes - Output escaped.
-* Dev - Plugin settings moved to the "WooCommerce > Settings" menu.
+* Dev - Admin settings split into sections.
+* Dev - Plugin settings moved back to the "WooCommerce > Settings" menu.
 * Dev - "Recommendations" removed.
 * Dev - "Key Manager" removed.
 * Dev - Code refactoring.

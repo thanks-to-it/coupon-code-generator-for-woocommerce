@@ -2,7 +2,7 @@
 /**
  * Coupon Code Generator for WooCommerce - Settings
  *
- * @version 1.4.0
+ * @version 2.0.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -15,17 +15,9 @@ if ( ! class_exists( 'Alg_WC_Settings_Coupon_Code_Generator' ) ) :
 class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 
 	/**
-	 * sections.
-	 *
-	 * @version 1.4.0
-	 * @since   1.4.0
-	 */
-	public $sections;
-
-	/**
 	 * Constructor.
 	 *
-	 * @version 1.4.0
+	 * @version 2.0.0
 	 * @since   1.0.0
 	 */
 	function __construct() {
@@ -38,8 +30,8 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 
 		// Sections
 		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-coupon-code-generator-settings-section.php';
-		$this->sections = array();
-		$this->sections['general'] = require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-coupon-code-generator-settings-general.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-coupon-code-generator-settings-order-coupon.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-coupon-code-generator-settings-auto-coupon.php';
 
 	}
 
@@ -123,12 +115,13 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 	/**
 	 * Save settings.
 	 *
-	 * @version 1.0.0
+	 * @version 2.0.0
 	 * @since   1.0.0
 	 */
 	function save() {
 		parent::save();
 		$this->maybe_reset_settings();
+		do_action( 'alg_wc_ccg_settings_saved' );
 	}
 
 }

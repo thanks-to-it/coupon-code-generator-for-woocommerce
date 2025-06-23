@@ -54,8 +54,8 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    (dev) replace `alg_wc_coupon_code_generator...` with `alg_wc_ccg...` everywhere
-	 * @todo    (dev) separate into smaller classes/files, e.g., `Alg_WC_Coupon_Code_Generator_Email`, etc.?
+	 * @todo    (v2.0.0) replace `alg_wc_coupon_code_generator...` with `alg_wc_ccg...` everywhere?
+	 * @todo    (v2.0.0) separate into smaller classes/files, e.g., `Alg_WC_Coupon_Code_Generator_Email`, etc.?
 	 * @todo    (feature) Order coupon: meta box: "delete order coupon", (maybe) "(re)generate order coupon", "(re)send order coupon", etc.
 	 * @todo    (feature) Order coupon: tool: "delete all order coupons" (i.e., delete 2 order metas)
 	 * @todo    (feature) automatic coupon in cart
@@ -69,15 +69,24 @@ class Alg_WC_Coupon_Code_Generator_Core {
 
 			// Options
 			$auto_coupon_code_options_default_options = array(
-				'template'       => '%code%',
-				'algorithm'      => 'crc32',
-				'length'         => 0,
+				'template'  => '%code%',
+				'algorithm' => 'crc32',
+				'length'    => 0,
 			);
-			$this->auto_coupon_code_options = array_merge( $auto_coupon_code_options_default_options, get_option( 'alg_wc_ccg_auto_coupon_code', array() ) );
+			$this->auto_coupon_code_options = array_merge(
+				$auto_coupon_code_options_default_options,
+				get_option( 'alg_wc_ccg_auto_coupon_code', array() )
+			);
 
 			// Hooks
-			add_action( 'wp_ajax_' . 'alg_wc_coupon_code_generator', array( $this, 'ajax_generate_coupon_code' ) );
-			add_action( 'admin_enqueue_scripts',                     array( $this, 'enqueue_generate_coupon_code_script' ) );
+			add_action(
+				'wp_ajax_' . 'alg_wc_coupon_code_generator',
+				array( $this, 'ajax_generate_coupon_code' )
+			);
+			add_action(
+				'admin_enqueue_scripts',
+				array( $this, 'enqueue_generate_coupon_code_script' )
+			);
 
 		}
 
@@ -105,23 +114,60 @@ class Alg_WC_Coupon_Code_Generator_Core {
 					'<code>%coupon_code%</code>'
 				) . '</p>',
 			);
-			$this->order_coupon_options = array_merge( $order_coupon_default_options, get_option( 'alg_wc_ccg_order_coupon', array() ) );
+			$this->order_coupon_options = array_merge(
+				$order_coupon_default_options,
+				get_option( 'alg_wc_ccg_order_coupon', array() )
+			);
 
 			// Hooks: Create coupon
 			foreach ( $this->order_coupon_options['order_status'] as $order_status ) {
-				add_action( 'woocommerce_order_status_' . substr( $order_status, 3 ), array( $this, 'create_order_coupon' ) );
+				add_action(
+					'woocommerce_order_status_' . substr( $order_status, 3 ),
+					array( $this, 'create_order_coupon' )
+				);
 			}
 
 			// Hooks: Email coupon
 			foreach ( $this->order_coupon_options['emails'] as $email ) {
-				add_filter( 'woocommerce_email_additional_content_' . $email, array( $this, 'add_coupon_to_order_email' ), 10, 3 );
+				add_filter(
+					'woocommerce_email_additional_content_' . $email,
+					array( $this, 'add_coupon_to_order_email' ),
+					10,
+					3
+				);
 			}
 
 			// Shortcodes
 			$this->shortcodes = require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-ccg-shortcodes.php';
 
+			// Tools
+			add_action( 'alg_wc_ccg_settings_saved', array( $this, 'create_coupons_for_all_orders' ) );
+			add_action( 'admin_notices', array( $this, 'tools_admin_notices' ) );
+
 		}
 
+	}
+
+	/**
+	 * tools_admin_notices.
+	 *
+	 * @version 2.0.0
+	 * @since   2.0.0
+	 */
+	function tools_admin_notices() {
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		if ( isset( $_GET['alg_wc_ccg_order_coupon_tool_all_orders'] ) ) {
+			?>
+			<div class="notice notice-success is-dismissible">
+				<p><?php printf(
+					/* Translators: %d: Number of coupons. */
+					esc_html__( '%d coupon(s) created.', 'coupon-code-generator-for-woocommerce' ),
+					intval( $_GET['alg_wc_ccg_order_coupon_tool_all_orders'] )
+				); ?></p>
+			</div>
+			<?php
+		}
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended
 	}
 
 	/**
@@ -132,28 +178,42 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	 *
 	 * @see     https://github.com/woocommerce/woocommerce/wiki/wc_get_orders-and-WC_Order_Query
 	 *
-	 * @todo    (v2.0.0) `add_action( 'admin_init', array( $this, 'create_coupons_for_all_orders' ) );`
-	 * @todo    (v2.0.0) add button/link
-	 * @todo    (v2.0.0) security
-	 * @todo    (v2.0.0) nonce
-	 * @todo    (dev) notice
 	 * @todo    (feature) send via email?
+	 * @todo    (feature) add `delete_coupons_for_all_orders` tool (`_alg_wc_ccg_order_coupon_code`, etc.)
 	 */
 	function create_coupons_for_all_orders() {
-		if ( isset( $_GET['alg_wc_ccg_order_coupon_all_orders'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$counter = 0;
-			$args    = array(
-				'type'   => 'shop_order',
-				'limit'  => -1,
-				'status' => $this->order_coupon_options['order_status'],
-				'return' => 'ids',
-			);
-			foreach ( wc_get_orders( $args ) as $order_id ) {
-				if ( $this->create_order_coupon( $order_id ) ) {
-					$counter++;
-				}
+
+		if ( 'no' === get_option( 'alg_wc_ccg_order_coupon_tool_all_orders', 'no' ) ) {
+			return;
+		} else {
+			update_option( 'alg_wc_ccg_order_coupon_tool_all_orders', 'no' );
+		}
+
+		if ( ! current_user_can( 'manage_woocommerce' ) ) {
+			return;
+		}
+
+		$counter = 0;
+		$args    = array(
+			'type'   => 'shop_order',
+			'limit'  => -1,
+			'status' => $this->order_coupon_options['order_status'],
+			'return' => 'ids',
+		);
+		foreach ( wc_get_orders( $args ) as $order_id ) {
+			if ( $this->create_order_coupon( $order_id ) ) {
+				$counter++;
 			}
 		}
+
+		wp_safe_redirect(
+			add_query_arg(
+				'alg_wc_ccg_order_coupon_tool_all_orders',
+				$counter
+			)
+		);
+		exit;
+
 	}
 
 	/**
@@ -186,19 +246,34 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	/**
 	 * add_coupon_to_order_email.
 	 *
-	 * @version 1.4.1
+	 * @version 2.0.0
 	 * @since   1.2.0
 	 *
 	 * @todo    (feature) customizable position, i.e., before or after the default content?
 	 */
 	function add_coupon_to_order_email( $content, $order, $email ) {
-		if (
-			is_a( $order, 'WC_Order' ) &&
-			( $_order = wc_get_order( $order->get_id() ) ) && // if this is not done, there will be no `_alg_wc_ccg_order_coupon_code` meta
-			( $code = $_order->get_meta( '_alg_wc_ccg_order_coupon_code' ) ) &&
-			wc_get_coupon_id_by_code( $code )
-		) {
-			return str_replace( '%coupon_code%', $code, $this->order_coupon_options['email_template'] ) . PHP_EOL . $content;
+		if ( is_a( $order, 'WC_Order' ) ) {
+
+			// Make sure coupon exists
+			$this->create_order_coupon( $order->get_id() );
+
+			// Add coupon text
+			if (
+				( $_order = wc_get_order( $order->get_id() ) ) && // if this is not done, there will be no `_alg_wc_ccg_order_coupon_code` meta
+				( $code = $_order->get_meta( '_alg_wc_ccg_order_coupon_code' ) ) &&
+				wc_get_coupon_id_by_code( $code )
+			) {
+				return (
+					str_replace(
+						'%coupon_code%',
+						$code,
+						$this->order_coupon_options['email_template']
+					) .
+					PHP_EOL .
+					$content
+				);
+			}
+
 		}
 		return $content;
 	}

@@ -3,7 +3,7 @@
 Plugin Name: Coupon Code Generator for WooCommerce
 Plugin URI: https://wordpress.org/plugins/coupon-code-generator-for-woocommerce/
 Description: Generate coupons in WooCommerce. Beautifully.
-Version: 2.0.0-dev
+Version: 2.0.0
 Author: Algoritmika Ltd
 Author URI: https://profiles.wordpress.org/algoritmika/
 Requires at least: 4.4
@@ -37,7 +37,7 @@ if ( 'coupon-code-generator-for-woocommerce.php' === basename( __FILE__ ) ) {
 	}
 }
 
-defined( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION', '2.0.0-dev-20250615-1452' );
+defined( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION', '2.0.0' );
 
 defined( 'ALG_WC_COUPON_CODE_GENERATOR_FILE' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_FILE', __FILE__ );
 

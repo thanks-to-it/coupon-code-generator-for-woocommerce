@@ -62,9 +62,7 @@ final class Alg_WC_Coupon_Code_Generator {
 	 *
 	 * @access  public
 	 *
-	 * @todo    (v2.0.0) test
-	 * @todo    (v2.0.0) readme.txt desc
-	 * @todo    (v2.0.0) cleanup, etc.
+	 * @todo    (v2.0.0) rename the plugin to e.g., "Automatic Order-Based Coupon Generator for WooCommerce"?
 	 */
 	function __construct() {
 
