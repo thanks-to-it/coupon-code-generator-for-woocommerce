@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: Coupon Code Generator for WooCommerce
-Plugin URI: https://wordpress.org/plugins/coupon-code-generator-for-woocommerce/
+Plugin Name: Smart Coupon Generator for WooCommerce
+Plugin URI: https://wordpress.org/plugins/smart-coupon-generator-for-woocommerce/
 Description: Generate coupons in WooCommerce. Beautifully.
 Version: 2.0.0
 Author: Algoritmika Ltd
 Author URI: https://profiles.wordpress.org/algoritmika/
 Requires at least: 4.4
-Text Domain: coupon-code-generator-for-woocommerce
+Text Domain: smart-coupon-generator-for-woocommerce
 Domain Path: /langs
-WC tested up to: 9.9
+WC tested up to: 10.2
 Requires Plugins: woocommerce
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html

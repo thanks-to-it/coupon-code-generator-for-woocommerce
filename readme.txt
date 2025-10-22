@@ -1,4 +1,4 @@
-=== Coupon Code Generator for WooCommerce ===
+=== Smart Coupon Generator for WooCommerce ===
 Contributors: algoritmika, thankstoit, anbinder, karzin
 Tags: woocommerce, coupon, woo commerce
 Requires at least: 4.4
@@ -11,7 +11,7 @@ Generate coupons in WooCommerce. Beautifully.
 
 == Description ==
 
-The **Coupon Code Generator for WooCommerce** plugin lets you enable automatic coupon code generation in WooCommerce.
+The **Smart Coupon Generator for WooCommerce** plugin lets you enable automatic coupon code generation in WooCommerce.
 
 ### ✅ Main Features ###
 
@@ -20,7 +20,7 @@ The **Coupon Code Generator for WooCommerce** plugin lets you enable automatic c
 
 ### 🚀 Automatic Order-Based Coupon Generator (in Emails) for WooCommerce ###
 
-The "Coupon Code Generator for WooCommerce" plugin is a dynamic tool designed to enhance your WooCommerce store's marketing and customer retention strategies.
+The "Smart Coupon Generator for WooCommerce" plugin is a dynamic tool designed to enhance your WooCommerce store's marketing and customer retention strategies.
 
 This plugin streamlines the process of creating and distributing coupons by automating it based on order statuses.
 
@@ -71,11 +71,11 @@ Customize the code template using placeholders like `%date_MM%` or `%user_id%`, 
 
 1. Upload the entire plugin folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the "Plugins" menu in WordPress.
-3. Start by visiting plugin settings at "WooCommerce > Settings > Coupon Code Generator".
+3. Start by visiting plugin settings at "WooCommerce > Settings > Smart Coupon Generator".
 
 == Changelog ==
 
-= 2.0.0 - 23/06/2025 =
+= 2.0.0 - 23/10/2025 =
 * Fix - Emails - Coupon code was not added to email.
 * Fix - Translation loading fixed.
 * Dev - Automatic Coupon - Algorithm - Moved to the free plugin version.
@@ -87,7 +87,8 @@ Customize the code template using placeholders like `%date_MM%` or `%user_id%`, 
 * Dev - "Recommendations" removed.
 * Dev - "Key Manager" removed.
 * Dev - Code refactoring.
-* WC tested up to: 9.9.
+* Dev - Plugin renamed.
+* WC tested up to: 10.2.
 * Tested up to: 6.8.
 
 = 1.4.2 - 27/12/2024 =

@@ -1,6 +1,6 @@
 <?php
 /**
- * Coupon Code Generator for WooCommerce - Section Settings
+ * Smart Coupon Generator for WooCommerce - Section Settings
  *
  * @version 1.4.0
  * @since   1.0.0

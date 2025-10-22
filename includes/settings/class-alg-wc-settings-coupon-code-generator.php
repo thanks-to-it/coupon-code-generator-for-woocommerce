@@ -1,6 +1,6 @@
 <?php
 /**
- * Coupon Code Generator for WooCommerce - Settings
+ * Smart Coupon Generator for WooCommerce - Settings
  *
  * @version 2.0.0
  * @since   1.0.0
@@ -23,7 +23,7 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 	function __construct() {
 
 		$this->id    = 'alg_wc_coupon_code_generator';
-		$this->label = __( 'Coupon Code Generator', 'coupon-code-generator-for-woocommerce' );
+		$this->label = __( 'Smart Coupon Generator', 'smart-coupon-generator-for-woocommerce' );
 		parent::__construct();
 
 		add_filter( 'woocommerce_admin_settings_sanitize_option', array( $this, 'sanitize_as_textarea' ), PHP_INT_MAX, 3 );
@@ -52,7 +52,7 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 	/**
 	 * get_settings.
 	 *
-	 * @version 1.4.0
+	 * @version 2.0.0
 	 * @since   1.0.0
 	 */
 	function get_settings() {
@@ -61,14 +61,14 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 			apply_filters( 'woocommerce_get_settings_' . $this->id . '_' . $current_section, array() ),
 			array(
 				array(
-					'title'     => __( 'Reset Settings', 'coupon-code-generator-for-woocommerce' ),
+					'title'     => __( 'Reset Settings', 'smart-coupon-generator-for-woocommerce' ),
 					'type'      => 'title',
 					'id'        => $this->id . '_' . $current_section . '_reset_options',
 				),
 				array(
-					'title'     => __( 'Reset section settings', 'coupon-code-generator-for-woocommerce' ),
-					'desc'      => '<strong>' . __( 'Reset', 'coupon-code-generator-for-woocommerce' ) . '</strong>',
-					'desc_tip'  => __( 'Check the box and save changes to reset.', 'coupon-code-generator-for-woocommerce' ),
+					'title'     => __( 'Reset section settings', 'smart-coupon-generator-for-woocommerce' ),
+					'desc'      => '<strong>' . __( 'Reset', 'smart-coupon-generator-for-woocommerce' ) . '</strong>',
+					'desc_tip'  => __( 'Check the box and save changes to reset.', 'smart-coupon-generator-for-woocommerce' ),
 					'id'        => $this->id . '_' . $current_section . '_reset',
 					'default'   => 'no',
 					'type'      => 'checkbox',
@@ -103,12 +103,12 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 	/**
 	 * admin_notice_settings_reset.
 	 *
-	 * @version 1.4.0
+	 * @version 2.0.0
 	 * @since   1.1.0
 	 */
 	function admin_notice_settings_reset() {
 		echo '<div class="notice notice-warning is-dismissible"><p><strong>' .
-			esc_html__( 'Your settings have been reset.', 'coupon-code-generator-for-woocommerce' ) .
+			esc_html__( 'Your settings have been reset.', 'smart-coupon-generator-for-woocommerce' ) .
 		'</strong></p></div>';
 	}
 

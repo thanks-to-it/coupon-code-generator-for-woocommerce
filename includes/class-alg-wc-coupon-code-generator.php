@@ -1,6 +1,6 @@
 <?php
 /**
- * Coupon Code Generator for WooCommerce - Main Class
+ * Smart Coupon Generator for WooCommerce - Main Class
  *
  * @version 2.0.0
  * @since   1.0.0
@@ -95,12 +95,12 @@ final class Alg_WC_Coupon_Code_Generator {
 	/**
 	 * localize.
 	 *
-	 * @version 1.3.0
+	 * @version 2.0.0
 	 * @since   1.2.0
 	 */
 	function localize() {
 		load_plugin_textdomain(
-			'coupon-code-generator-for-woocommerce',
+			'smart-coupon-generator-for-woocommerce',
 			false,
 			dirname( plugin_basename( ALG_WC_COUPON_CODE_GENERATOR_FILE ) ) . '/langs/'
 		);
@@ -176,14 +176,14 @@ final class Alg_WC_Coupon_Code_Generator {
 		$custom_links = array();
 
 		$custom_links[] = '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=alg_wc_coupon_code_generator' ) . '">' .
-			__( 'Settings', 'coupon-code-generator-for-woocommerce' ) .
+			__( 'Settings', 'smart-coupon-generator-for-woocommerce' ) .
 		'</a>';
 
 		return array_merge( $custom_links, $links );
 	}
 
 	/**
-	 * Add Coupon Code Generator settings tab to WooCommerce settings.
+	 * Add "Smart Coupon Generator" settings tab to WooCommerce settings.
 	 *
 	 * @version 1.4.0
 	 * @since   1.0.0

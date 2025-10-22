@@ -2,28 +2,28 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Coupon Code Generator for WooCommerce 2.0.0\n"
+"Project-Id-Version: Smart Coupon Generator for WooCommerce 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/coupon-code-generator-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-23T16:34:43+00:00\n"
+"POT-Creation-Date: 2025-10-22T21:46:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
-"X-Domain: coupon-code-generator-for-woocommerce\n"
+"X-Domain: smart-coupon-generator-for-woocommerce\n"
 
 #. Plugin Name of the plugin
 #: coupon-code-generator-for-woocommerce.php
 #: includes/class-alg-wc-coupon-code-generator-core.php:312
 #: includes/class-alg-wc-coupon-code-generator-core.php:341
-msgid "Coupon Code Generator for WooCommerce"
+msgid "Smart Coupon Generator for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
 #: coupon-code-generator-for-woocommerce.php
-msgid "https://wordpress.org/plugins/coupon-code-generator-for-woocommerce/"
+msgid "https://wordpress.org/plugins/smart-coupon-generator-for-woocommerce/"
 msgstr ""
 
 #. Description of the plugin
@@ -280,7 +280,7 @@ msgid "Check the box and save changes to run the tool."
 msgstr ""
 
 #: includes/settings/class-alg-wc-settings-coupon-code-generator.php:26
-msgid "Coupon Code Generator"
+msgid "Smart Coupon Generator"
 msgstr ""
 
 #: includes/settings/class-alg-wc-settings-coupon-code-generator.php:64
