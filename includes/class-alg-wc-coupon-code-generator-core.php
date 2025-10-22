@@ -2,7 +2,7 @@
 /**
  * Smart Coupon Generator for WooCommerce - Core Class
  *
- * @version 2.0.0
+ * @version 2.0.1
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -51,7 +51,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	/**
 	 * init.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   2.0.0
 	 *
 	 * @todo    (v2.0.0) replace `alg_wc_coupon_code_generator...` with `alg_wc_ccg...` everywhere?
@@ -151,7 +151,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	/**
 	 * tools_admin_notices.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   2.0.0
 	 */
 	function tools_admin_notices() {
@@ -281,7 +281,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	/**
 	 * create_order_coupon.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   1.2.0
 	 *
 	 * @see     https://woocommerce.github.io/code-reference/classes/WC-Coupon.html

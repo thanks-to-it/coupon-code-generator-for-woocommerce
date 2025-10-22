@@ -2,7 +2,7 @@
 /**
  * Smart Coupon Generator for WooCommerce - Main Class
  *
- * @version 2.0.0
+ * @version 2.0.1
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -95,7 +95,7 @@ final class Alg_WC_Coupon_Code_Generator {
 	/**
 	 * localize.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   1.2.0
 	 */
 	function localize() {
@@ -166,7 +166,7 @@ final class Alg_WC_Coupon_Code_Generator {
 	/**
 	 * Show action links on the plugin screen.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   1.0.0
 	 *
 	 * @param   mixed $links

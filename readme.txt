@@ -3,7 +3,7 @@ Contributors: algoritmika, thankstoit, anbinder, karzin
 Tags: woocommerce, coupon, woo commerce
 Requires at least: 4.4
 Tested up to: 6.8
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -75,7 +75,11 @@ Customize the code template using placeholders like `%date_MM%` or `%user_id%`, 
 
 == Changelog ==
 
-= 2.0.0 - 23/10/2025 =
+= 2.0.1 - 23/10/2025 =
+* Dev - Plugin renamed.
+* WC tested up to: 10.2.
+
+= 2.0.0 - 23/06/2025 =
 * Fix - Emails - Coupon code was not added to email.
 * Fix - Translation loading fixed.
 * Dev - Automatic Coupon - Algorithm - Moved to the free plugin version.
@@ -87,8 +91,7 @@ Customize the code template using placeholders like `%date_MM%` or `%user_id%`, 
 * Dev - "Recommendations" removed.
 * Dev - "Key Manager" removed.
 * Dev - Code refactoring.
-* Dev - Plugin renamed.
-* WC tested up to: 10.2.
+* WC tested up to: 9.9.
 * Tested up to: 6.8.
 
 = 1.4.2 - 27/12/2024 =

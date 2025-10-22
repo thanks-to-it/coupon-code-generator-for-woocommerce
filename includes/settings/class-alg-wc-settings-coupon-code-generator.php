@@ -2,7 +2,7 @@
 /**
  * Smart Coupon Generator for WooCommerce - Settings
  *
- * @version 2.0.0
+ * @version 2.0.1
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -17,7 +17,7 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   1.0.0
 	 */
 	function __construct() {
@@ -52,7 +52,7 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 	/**
 	 * get_settings.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   1.0.0
 	 */
 	function get_settings() {
@@ -103,7 +103,7 @@ class Alg_WC_Settings_Coupon_Code_Generator extends WC_Settings_Page {
 	/**
 	 * admin_notice_settings_reset.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   1.1.0
 	 */
 	function admin_notice_settings_reset() {

@@ -2,7 +2,7 @@
 /**
  * Smart Coupon Generator for WooCommerce - Order Coupon Section Settings
  *
- * @version 2.0.0
+ * @version 2.0.1
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd.
@@ -17,7 +17,7 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   2.0.0
 	 */
 	function __construct() {
@@ -62,7 +62,7 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 	/**
 	 * get_settings.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.1
 	 * @since   2.0.0
 	 *
 	 * @todo    (dev) `alg_wc_ccg_order_coupon[email_template]`: no `<p>` in default value? (and then maybe apply `wp_autop()`)?
