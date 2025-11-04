@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: Smart Coupon Generator for WooCommerce
-Plugin URI: https://wordpress.org/plugins/smart-coupon-generator-for-woocommerce/
+Plugin Name: Order Coupon Automator for WooCommerce
+Plugin URI: https://wordpress.org/plugins/order-coupon-automator-for-woocommerce/
 Description: Generate coupons in WooCommerce. Beautifully.
-Version: 2.0.1
+Version: 2.0.2
 Author: Algoritmika Ltd
-Author URI: https://profiles.wordpress.org/algoritmika/
+Author URI: https://algoritmika.com
 Requires at least: 4.4
-Text Domain: smart-coupon-generator-for-woocommerce
+Text Domain: order-coupon-automator-for-woocommerce
 Domain Path: /langs
-WC tested up to: 10.2
+WC tested up to: 10.3
 Requires Plugins: woocommerce
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -37,7 +37,7 @@ if ( 'coupon-code-generator-for-woocommerce.php' === basename( __FILE__ ) ) {
 	}
 }
 
-defined( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION', '2.0.1' );
+defined( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION', '2.0.2' );
 
 defined( 'ALG_WC_COUPON_CODE_GENERATOR_FILE' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_FILE', __FILE__ );
 

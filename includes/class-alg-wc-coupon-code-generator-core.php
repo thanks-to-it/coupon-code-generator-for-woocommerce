@@ -1,8 +1,8 @@
 <?php
 /**
- * Smart Coupon Generator for WooCommerce - Core Class
+ * Order Coupon Automator for WooCommerce - Core Class
  *
- * @version 2.0.1
+ * @version 2.0.2
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -51,7 +51,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	/**
 	 * init.
 	 *
-	 * @version 2.0.1
+	 * @version 2.0.2
 	 * @since   2.0.0
 	 *
 	 * @todo    (v2.0.0) replace `alg_wc_coupon_code_generator...` with `alg_wc_ccg...` everywhere?
@@ -110,7 +110,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 				'emails'               => array( 'customer_completed_order' ),
 				'email_template'       => '<p>' . sprintf(
 					/* Translators: %s: Coupon code. */
-					__( 'Here is a coupon for your next purchase: %s', 'smart-coupon-generator-for-woocommerce' ),
+					__( 'Here is a coupon for your next purchase: %s', 'order-coupon-automator-for-woocommerce' ),
 					'<code>%coupon_code%</code>'
 				) . '</p>',
 			);
@@ -151,7 +151,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	/**
 	 * tools_admin_notices.
 	 *
-	 * @version 2.0.1
+	 * @version 2.0.2
 	 * @since   2.0.0
 	 */
 	function tools_admin_notices() {
@@ -161,7 +161,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 			<div class="notice notice-success is-dismissible">
 				<p><?php printf(
 					/* Translators: %d: Number of coupons. */
-					esc_html__( '%d coupon(s) created.', 'smart-coupon-generator-for-woocommerce' ),
+					esc_html__( '%d coupon(s) created.', 'order-coupon-automator-for-woocommerce' ),
 					intval( $_GET['alg_wc_ccg_order_coupon_tool_all_orders'] )
 				); ?></p>
 			</div>
@@ -281,7 +281,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	/**
 	 * create_order_coupon.
 	 *
-	 * @version 2.0.1
+	 * @version 2.0.2
 	 * @since   1.2.0
 	 *
 	 * @see     https://woocommerce.github.io/code-reference/classes/WC-Coupon.html
@@ -308,8 +308,8 @@ class Alg_WC_Coupon_Code_Generator_Core {
 				'post_type'    => 'shop_coupon',
 				'post_excerpt' => sprintf(
 					/* Translators: %1$s: Plugin name, %2$s: Order ID. */
-					__( 'Created by "%1$s" plugin for order #%2$s', 'smart-coupon-generator-for-woocommerce' ),
-					__( 'Smart Coupon Generator for WooCommerce', 'smart-coupon-generator-for-woocommerce' ),
+					__( 'Created by "%1$s" plugin for order #%2$s', 'order-coupon-automator-for-woocommerce' ),
+					__( 'Order Coupon Automator for WooCommerce', 'order-coupon-automator-for-woocommerce' ),
 					$order->get_id()
 				),
 			);
@@ -337,8 +337,8 @@ class Alg_WC_Coupon_Code_Generator_Core {
 				$order->add_order_note(
 					sprintf(
 						/* Translators: %1$s: Plugin name, %2$s: Coupon code. */
-						__( '"%1$s" plugin generated <code>%2$s</code> coupon for this order.', 'smart-coupon-generator-for-woocommerce' ),
-						__( 'Smart Coupon Generator for WooCommerce', 'smart-coupon-generator-for-woocommerce' ),
+						__( '"%1$s" plugin generated <code>%2$s</code> coupon for this order.', 'order-coupon-automator-for-woocommerce' ),
+						__( 'Order Coupon Automator for WooCommerce', 'order-coupon-automator-for-woocommerce' ),
 						$code
 					)
 				);
@@ -356,7 +356,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 	/**
 	 * enqueue_generate_coupon_code_script.
 	 *
-	 * @version 2.0.0
+	 * @version 2.0.2
 	 * @since   1.0.0
 	 *
 	 * @todo    (v2.0.0) use `get_current_screen()` ([action] => add, [id] => shop_coupon)?
@@ -382,7 +382,7 @@ class Alg_WC_Coupon_Code_Generator_Core {
 			);
 			wp_localize_script(
 				'alg-wc-coupon-code-generator',
-				'ajax_object',
+				'alg_wc_ccg_ajax_object',
 				array( 'ajax_url' => admin_url( 'admin-ajax.php' ) )
 			);
 		}

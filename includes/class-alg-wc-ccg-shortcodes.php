@@ -1,6 +1,6 @@
 <?php
 /**
- * Smart Coupon Generator for WooCommerce - Shortcodes Class
+ * Order Coupon Automator for WooCommerce - Shortcodes Class
  *
  * @version 2.0.0
  * @since   1.2.0

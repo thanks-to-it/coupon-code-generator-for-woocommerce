@@ -1,9 +1,9 @@
-=== Smart Coupon Generator for WooCommerce ===
+=== Order Coupon Automator for WooCommerce ===
 Contributors: algoritmika, thankstoit, anbinder, karzin
 Tags: woocommerce, coupon, woo commerce
 Requires at least: 4.4
 Tested up to: 6.8
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -11,7 +11,7 @@ Generate coupons in WooCommerce. Beautifully.
 
 == Description ==
 
-The **Smart Coupon Generator for WooCommerce** plugin lets you enable automatic coupon code generation in WooCommerce.
+The **Order Coupon Automator for WooCommerce** plugin lets you enable automatic coupon code generation in WooCommerce.
 
 ### ✅ Main Features ###
 
@@ -20,7 +20,7 @@ The **Smart Coupon Generator for WooCommerce** plugin lets you enable automatic 
 
 ### 🚀 Automatic Order-Based Coupon Generator (in Emails) for WooCommerce ###
 
-The "Smart Coupon Generator for WooCommerce" plugin is a dynamic tool designed to enhance your WooCommerce store's marketing and customer retention strategies.
+The "Order Coupon Automator for WooCommerce" plugin is a dynamic tool designed to enhance your WooCommerce store's marketing and customer retention strategies.
 
 This plugin streamlines the process of creating and distributing coupons by automating it based on order statuses.
 
@@ -71,9 +71,13 @@ Customize the code template using placeholders like `%date_MM%` or `%user_id%`, 
 
 1. Upload the entire plugin folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the "Plugins" menu in WordPress.
-3. Start by visiting plugin settings at "WooCommerce > Settings > Smart Coupon Generator".
+3. Start by visiting plugin settings at "WooCommerce > Settings > Order Coupon Automator".
 
 == Changelog ==
+
+= 2.0.2 - 04/11/2025 =
+* Dev - Prefix added to the JavaScript object name (`alg_wc_ccg_ajax_object`).
+* WC tested up to: 10.3.
 
 = 2.0.1 - 23/10/2025 =
 * Dev - Plugin renamed.

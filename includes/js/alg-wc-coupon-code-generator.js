@@ -1,7 +1,7 @@
 /**
  * alg-wc-coupon-code-generator.js
  *
- * @version 1.0.0
+ * @version 2.0.2
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -11,7 +11,7 @@ jQuery( document ).ready( function () {
 	/**
 	 * document ready.
 	 *
-	 * @version 1.0.0
+	 * @version 2.0.2
 	 * @since   1.0.0
 	 */
 	if ( '' === jQuery( "#title" ).val() ) {
@@ -20,7 +20,7 @@ jQuery( document ).ready( function () {
 		};
 		jQuery.ajax( {
 			type:    "POST",
-			url:     ajax_object.ajax_url,
+			url:     alg_wc_ccg_ajax_object.ajax_url,
 			data:    data,
 			success: function ( response ) {
 				if ( '' !== response && '' === jQuery( "#title" ).val() ) {
