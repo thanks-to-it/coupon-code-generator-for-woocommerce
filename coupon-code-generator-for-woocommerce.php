@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name: Order Coupon Automator for WooCommerce
-Plugin URI: https://wordpress.org/plugins/order-coupon-automator-for-woocommerce/
+Plugin Name: ZILI Coupon Code Generator for WooCommerce
+Plugin URI: https://wordpress.org/plugins/zili-coupon-code-generator-for-woocommerce/
 Description: Generate coupons in WooCommerce. Beautifully.
-Version: 2.0.2
+Version: 2.0.3
 Author: Algoritmika Ltd
 Author URI: https://algoritmika.com
 Requires at least: 4.4
-Text Domain: order-coupon-automator-for-woocommerce
+Text Domain: zili-coupon-code-generator-for-woocommerce
 Domain Path: /langs
 WC tested up to: 10.3
 Requires Plugins: woocommerce
@@ -37,7 +37,7 @@ if ( 'coupon-code-generator-for-woocommerce.php' === basename( __FILE__ ) ) {
 	}
 }
 
-defined( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION', '2.0.2' );
+defined( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_VERSION', '2.0.3' );
 
 defined( 'ALG_WC_COUPON_CODE_GENERATOR_FILE' ) || define( 'ALG_WC_COUPON_CODE_GENERATOR_FILE', __FILE__ );
 

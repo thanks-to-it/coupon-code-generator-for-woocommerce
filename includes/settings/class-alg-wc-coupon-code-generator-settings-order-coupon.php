@@ -1,8 +1,8 @@
 <?php
 /**
- * Order Coupon Automator for WooCommerce - Order Coupon Section Settings
+ * ZILI Coupon Code Generator for WooCommerce - Order Coupon Section Settings
  *
- * @version 2.0.2
+ * @version 2.0.3
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd.
@@ -17,12 +17,12 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.0.2
+	 * @version 2.0.3
 	 * @since   2.0.0
 	 */
 	function __construct() {
 		$this->id   = '';
-		$this->desc = __( 'Order Coupon', 'order-coupon-automator-for-woocommerce' );
+		$this->desc = __( 'Order Coupon', 'zili-coupon-code-generator-for-woocommerce' );
 		parent::__construct();
 	}
 
@@ -62,7 +62,7 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 	/**
 	 * get_settings.
 	 *
-	 * @version 2.0.2
+	 * @version 2.0.3
 	 * @since   2.0.0
 	 *
 	 * @todo    (dev) `alg_wc_ccg_order_coupon[email_template]`: no `<p>` in default value? (and then maybe apply `wp_autop()`)?
@@ -75,24 +75,24 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 
 		$settings = array(
 			array(
-				'title'             => __( 'Order Coupon Options', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Order Coupon Options', 'zili-coupon-code-generator-for-woocommerce' ),
 				'desc'              => (
-					__( 'This will generate coupon automatically for the selected order status updates.', 'order-coupon-automator-for-woocommerce' ) . ' ' .
-					__( 'Coupon code will be automatically attached to the selected customer\'s emails.', 'order-coupon-automator-for-woocommerce' )
+					__( 'This will generate coupon automatically for the selected order status updates.', 'zili-coupon-code-generator-for-woocommerce' ) . ' ' .
+					__( 'Coupon code will be automatically attached to the selected customer\'s emails.', 'zili-coupon-code-generator-for-woocommerce' )
 				),
 				'type'              => 'title',
 				'id'                => 'alg_wc_ccg_order_coupon_options',
 			),
 			array(
-				'title'             => __( 'Order coupon', 'order-coupon-automator-for-woocommerce' ),
-				'desc'              => '<strong>' . __( 'Enable section', 'order-coupon-automator-for-woocommerce' ) . '</strong>',
+				'title'             => __( 'Order coupon', 'zili-coupon-code-generator-for-woocommerce' ),
+				'desc'              => '<strong>' . __( 'Enable section', 'zili-coupon-code-generator-for-woocommerce' ) . '</strong>',
 				'id'                => 'alg_wc_ccg_order_coupon_enabled',
 				'default'           => 'no',
 				'type'              => 'checkbox',
 			),
 			array(
-				'title'             => __( 'Order status', 'order-coupon-automator-for-woocommerce' ),
-				'desc_tip'          => __( 'Select order status(es) on which coupon code should be created. If you select multiple statuses, coupon will be created only once, on whichever status change occurs first.', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Order status', 'zili-coupon-code-generator-for-woocommerce' ),
+				'desc_tip'          => __( 'Select order status(es) on which coupon code should be created. If you select multiple statuses, coupon will be created only once, on whichever status change occurs first.', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[order_status]',
 				'default'           => array( 'wc-completed' ),
 				'type'              => 'multiselect',
@@ -100,21 +100,21 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 				'options'           => wc_get_order_statuses(),
 			),
 			array(
-				'title'             => __( 'Minimum order amount', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Minimum order amount', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[minimum_order_amount]',
 				'desc_tip'          => (
-					__( 'Minimum order amount for the coupon to be generated.', 'order-coupon-automator-for-woocommerce' ) . ' ' .
-					__( 'Ignored if empty or zero.', 'order-coupon-automator-for-woocommerce' )
+					__( 'Minimum order amount for the coupon to be generated.', 'zili-coupon-code-generator-for-woocommerce' ) . ' ' .
+					__( 'Ignored if empty or zero.', 'zili-coupon-code-generator-for-woocommerce' )
 				),
 				'default'           => '',
 				'type'              => 'number',
 				'custom_attributes' => array( 'min' => 0, 'step' => 0.000001 ),
 			),
 			array(
-				'title'             => __( 'Coupon code template', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Coupon code template', 'zili-coupon-code-generator-for-woocommerce' ),
 				'desc'              => sprintf(
 					/* Translators: %s: Placeholder list. */
-					__( 'Available placeholders: %s.', 'order-coupon-automator-for-woocommerce' ),
+					__( 'Available placeholders: %s.', 'zili-coupon-code-generator-for-woocommerce' ),
 					'<code>' . implode( '</code>, <code>', array(
 						'%order_id%',
 						'%order_number%',
@@ -130,37 +130,37 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 				'css'               => 'width:100%;',
 			),
 			array(
-				'title'             => __( 'Coupon type', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Coupon type', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[discount_type]',
 				'default'           => 'percent',
 				'type'              => 'select',
 				'class'             => 'chosen_select',
 				'options'           => array(
-					'percent'       => __( 'Percentage discount', 'order-coupon-automator-for-woocommerce' ),
-					'fixed_cart'    => __( 'Fixed cart discount', 'order-coupon-automator-for-woocommerce' ),
-					'fixed_product' => __( 'Fixed product discount', 'order-coupon-automator-for-woocommerce' ),
+					'percent'       => __( 'Percentage discount', 'zili-coupon-code-generator-for-woocommerce' ),
+					'fixed_cart'    => __( 'Fixed cart discount', 'zili-coupon-code-generator-for-woocommerce' ),
+					'fixed_product' => __( 'Fixed product discount', 'zili-coupon-code-generator-for-woocommerce' ),
 				),
 			),
 			array(
-				'title'             => __( 'Coupon amount', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Coupon amount', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[coupon_amount]',
 				'default'           => 10,
 				'type'              => 'number',
 				'custom_attributes' => array( 'min' => 0, 'step' => 0.000001 ),
 			),
 			array(
-				'title'             => __( 'Individual use only', 'order-coupon-automator-for-woocommerce' ),
-				'desc'              => __( 'Enable', 'order-coupon-automator-for-woocommerce' ),
-				'desc_tip'          => __( 'Coupon cannot be used in conjunction with other coupons.', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Individual use only', 'zili-coupon-code-generator-for-woocommerce' ),
+				'desc'              => __( 'Enable', 'zili-coupon-code-generator-for-woocommerce' ),
+				'desc_tip'          => __( 'Coupon cannot be used in conjunction with other coupons.', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[individual_use]',
 				'default'           => 'no',
 				'type'              => 'checkbox',
 			),
 			array(
-				'title'             => __( 'Product categories', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Product categories', 'zili-coupon-code-generator-for-woocommerce' ),
 				'desc_tip'          => (
-					__( 'Product categories that the coupon will be applied to, or that need to be in the cart in order for the "Fixed cart discount" to be applied.', 'order-coupon-automator-for-woocommerce' ) . ' ' .
-					__( 'Ignored if empty.', 'order-coupon-automator-for-woocommerce' )
+					__( 'Product categories that the coupon will be applied to, or that need to be in the cart in order for the "Fixed cart discount" to be applied.', 'zili-coupon-code-generator-for-woocommerce' ) . ' ' .
+					__( 'Ignored if empty.', 'zili-coupon-code-generator-for-woocommerce' )
 				),
 				'id'                => 'alg_wc_ccg_order_coupon[product_categories]',
 				'default'           => array(),
@@ -169,43 +169,43 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 				'options'           => $this->get_product_cats(),
 			),
 			array(
-				'title'             => __( 'Usage limit per coupon', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Usage limit per coupon', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[usage_limit]',
 				'default'           => '',
 				'type'              => 'number',
 				'custom_attributes' => array( 'min' => 0, 'step' => 1 ),
 			),
 			array(
-				'title'             => __( 'Usage limit per user', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Usage limit per user', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[usage_limit_per_user]',
 				'default'           => '',
 				'type'              => 'number',
 				'custom_attributes' => array( 'min' => 0, 'step' => 1 ),
 			),
 			array(
-				'title'             => __( 'Allowed emails', 'order-coupon-automator-for-woocommerce' ),
-				'desc'              => __( 'Enable', 'order-coupon-automator-for-woocommerce' ),
-				'desc_tip'          => __( 'Set coupon\'s "Allowed emails" option to order\'s billing email.', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Allowed emails', 'zili-coupon-code-generator-for-woocommerce' ),
+				'desc'              => __( 'Enable', 'zili-coupon-code-generator-for-woocommerce' ),
+				'desc_tip'          => __( 'Set coupon\'s "Allowed emails" option to order\'s billing email.', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[allowed_emails]',
 				'default'           => 'yes',
 				'type'              => 'checkbox',
 			),
 			array(
-				'title'             => __( 'Minimum spend', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Minimum spend', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[minimum_amount]',
 				'default'           => '',
 				'type'              => 'number',
 				'custom_attributes' => array( 'min' => 0, 'step' => 0.000001 ),
 			),
 			array(
-				'title'             => __( 'Maximum spend', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Maximum spend', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[maximum_amount]',
 				'default'           => '',
 				'type'              => 'number',
 				'custom_attributes' => array( 'min' => 0, 'step' => 0.000001 ),
 			),
 			array(
-				'title'             => __( 'Emails', 'order-coupon-automator-for-woocommerce' ),
+				'title'             => __( 'Emails', 'zili-coupon-code-generator-for-woocommerce' ),
 				'id'                => 'alg_wc_ccg_order_coupon[emails]',
 				'default'           => array( 'customer_completed_order' ),
 				'type'              => 'multiselect',
@@ -214,10 +214,10 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 			),
 			array(
 				'desc'              => (
-					__( 'Email template', 'order-coupon-automator-for-woocommerce' ) . '<br>' .
+					__( 'Email template', 'zili-coupon-code-generator-for-woocommerce' ) . '<br>' .
 					sprintf(
 						/* Translators: %s: Placeholder list. */
-						__( 'Available placeholders: %s.', 'order-coupon-automator-for-woocommerce' ),
+						__( 'Available placeholders: %s.', 'zili-coupon-code-generator-for-woocommerce' ),
 						'<code>' . implode( '</code>, <code>', array(
 							'%coupon_code%',
 						) ) . '</code>'
@@ -228,7 +228,7 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 					'<p>' .
 						sprintf(
 							/* Translators: %s: Coupon code. */
-							__( 'Here is a coupon for your next purchase: %s', 'order-coupon-automator-for-woocommerce' ),
+							__( 'Here is a coupon for your next purchase: %s', 'zili-coupon-code-generator-for-woocommerce' ),
 							'<code>%coupon_code%</code>'
 						) .
 					'</p>'
@@ -245,14 +245,14 @@ class Alg_WC_Coupon_Code_Generator_Settings_Order_Coupon extends Alg_WC_Coupon_C
 		if ( 'yes' === get_option( 'alg_wc_ccg_order_coupon_enabled', 'no' ) ) {
 			$settings = array_merge( $settings, array(
 				array(
-					'title'    => __( 'Tools', 'order-coupon-automator-for-woocommerce' ),
+					'title'    => __( 'Tools', 'zili-coupon-code-generator-for-woocommerce' ),
 					'type'     => 'title',
 					'id'       => 'alg_wc_ccg_order_coupon_tools',
 				),
 				array(
-					'title'    => __( 'Create coupons for all orders', 'order-coupon-automator-for-woocommerce' ),
-					'desc'     => __( 'Create', 'order-coupon-automator-for-woocommerce' ),
-					'desc_tip' => __( 'Check the box and save changes to run the tool.', 'order-coupon-automator-for-woocommerce' ),
+					'title'    => __( 'Create coupons for all orders', 'zili-coupon-code-generator-for-woocommerce' ),
+					'desc'     => __( 'Create', 'zili-coupon-code-generator-for-woocommerce' ),
+					'desc_tip' => __( 'Check the box and save changes to run the tool.', 'zili-coupon-code-generator-for-woocommerce' ),
 					'id'       => 'alg_wc_ccg_order_coupon_tool_all_orders',
 					'default'  => 'no',
 					'type'     => 'checkbox',

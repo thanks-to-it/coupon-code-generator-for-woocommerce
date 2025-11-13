@@ -1,8 +1,8 @@
 <?php
 /**
- * Order Coupon Automator for WooCommerce - Main Class
+ * ZILI Coupon Code Generator for WooCommerce - Main Class
  *
- * @version 2.0.2
+ * @version 2.0.3
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -95,12 +95,12 @@ final class Alg_WC_Coupon_Code_Generator {
 	/**
 	 * localize.
 	 *
-	 * @version 2.0.2
+	 * @version 2.0.3
 	 * @since   1.2.0
 	 */
 	function localize() {
 		load_plugin_textdomain(
-			'order-coupon-automator-for-woocommerce',
+			'zili-coupon-code-generator-for-woocommerce',
 			false,
 			dirname( plugin_basename( ALG_WC_COUPON_CODE_GENERATOR_FILE ) ) . '/langs/'
 		);
@@ -166,7 +166,7 @@ final class Alg_WC_Coupon_Code_Generator {
 	/**
 	 * Show action links on the plugin screen.
 	 *
-	 * @version 2.0.2
+	 * @version 2.0.3
 	 * @since   1.0.0
 	 *
 	 * @param   mixed $links
@@ -176,14 +176,14 @@ final class Alg_WC_Coupon_Code_Generator {
 		$custom_links = array();
 
 		$custom_links[] = '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=alg_wc_coupon_code_generator' ) . '">' .
-			__( 'Settings', 'order-coupon-automator-for-woocommerce' ) .
+			__( 'Settings', 'zili-coupon-code-generator-for-woocommerce' ) .
 		'</a>';
 
 		return array_merge( $custom_links, $links );
 	}
 
 	/**
-	 * Add "Order Coupon Automator" settings tab to WooCommerce settings.
+	 * Add "ZILI Coupon Code Generator" settings tab to WooCommerce settings.
 	 *
 	 * @version 1.4.0
 	 * @since   1.0.0

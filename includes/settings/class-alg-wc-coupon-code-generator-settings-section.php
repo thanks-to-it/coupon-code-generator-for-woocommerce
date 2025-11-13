@@ -1,6 +1,6 @@
 <?php
 /**
- * Order Coupon Automator for WooCommerce - Section Settings
+ * ZILI Coupon Code Generator for WooCommerce - Section Settings
  *
  * @version 1.4.0
  * @since   1.0.0

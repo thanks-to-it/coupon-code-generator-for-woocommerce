@@ -1,6 +1,6 @@
 <?php
 /**
- * Order Coupon Automator for WooCommerce - Shortcodes Class
+ * ZILI Coupon Code Generator for WooCommerce - Shortcodes Class
  *
  * @version 2.0.0
  * @since   1.2.0
